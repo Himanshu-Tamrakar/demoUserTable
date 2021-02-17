@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>SB Admin 2 - Tables</title>
+    <!-- Custom fonts for this template -->
+    <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <!-- Custom styles for this template -->
+    <link href="../css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="../new css/new.css" rel="stylesheet">
+    <!-- Custom styles for this page -->
+    <link href="../vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.3/css/intlTelInput.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.3/js/intlTelInput.min.js"></script>
+    <script src="../js/new.js" type="text/javascript"></script>
+</head>
+
+<body id="page-top">
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+        <!-- Sidebar -->
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+            <!-- Sidebar - Brand -->
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+                <div class="sidebar-brand-icon ">
+                    <i class="fa fa-tint" aria-hidden="true"></i>
+                </div>
+                <div class="sidebar-brand-text mx-3">Water Meter <sup></sup></div>
+            </a>
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+            <!-- Nav Item - Dashboard -->
+            <li class="nav-item ">
+                <a class="nav-link" href="#">
+                    <i class="fas fa-fw fa-home"></i>
+                    <span>Home</span></a>
+            </li>
+            <li class="nav-item ">
+                <a class="nav-link" href="index.html">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Dashboard</span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="user.html">
+                    <i class="fas fa-fw fa-user"></i>
+                    <span>User</span></a>
+            </li>
+            <li class="nav-item ">
+                <a class="nav-link" href="roles.html">
+                    <i class="fa fa-id-badge" aria-hidden="true"></i>
+                    <span>Role</span></a>
+            </li>
+            <li class="nav-item ">
+                <a class="nav-link" href="../Asset Files/Asset-types.html">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Asset Types</span></a>
+            </li>
+            <li class="nav-item ">
+                <a class="nav-link" href="../Asset Files/AssetManagement.html">
+                    <i class="fa fa-list" aria-hidden="true"></i>
+                    <span>Asset Management</span></a>
+            </li>
+            <li class="nav-item ">
+                <a class="nav-link" href="../Asset Files/Asset-consumer-mapping.html">
+                    <i class="fa fa-list" aria-hidden="true"></i>
+                    <span>Asset-Consumer Mapping</span></a>
+            </li>
+            <li class="nav-item ">
+                <a class="nav-link" href="pricing-plan.html">
+                    <i class="fas fa-fw fa-usd" aria-hidden="true"></i>
+                    <span>Pricing Plan</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsereport" aria-expanded="true" aria-controls="collapseTwo">
+                    <i class="fas fa-fw fa-cog"></i>
+                    <span>Reports</span>
+                </a>
+                <div id="collapsereport" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <a class="collapse-item" href="Monthly-water-usage-report.html">Water Usage Report</a>
+                        <a class="collapse-item" href="../payment files/billing-payments.html">Billing & Payments Report</a>
+                        <a class="collapse-item" href="Availaibleconnection.html">Availaible Connection</a>
+                        <a class="collapse-item" href="complain-status.html">Complain </a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseconsumer" aria-expanded="true" aria-controls="collapseTwo">
+                    <i class="fas fa-fw fa-cog"></i>
+                    <span>Customer screen</span>
+                </a>
+                <div id="collapseconsumer" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <a class="collapse-item" href="../payment files/view-pay-bill.html">View & Pay Bill</a>
+                        <a class="collapse-item" href="../payment files/view-bill-history.html">View Bill History</a>
+                        <a class="collapse-item" href="../payment files/payment-receipt1.html">Payment Receipt </a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseconsumernew" aria-expanded="true" aria-controls="collapseTwo">
+                    <i class="fas fa-fw fa-cog"></i>
+                    <span>New meter connection</span>
+                </a>
+                <div id="collapseconsumernew" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <a class="collapse-item" href="new_connection.html">New Connection Request</a>
+                        <a class="collapse-item" href="upload-document.html">Upload Document</a>
+                        <a class="collapse-item" href="../payment files/payment_other-charges.html">Pay Charges</a>
+                        <a class="collapse-item" href="complain-status-tracking.html">Complain Tracking</a>
+                        <a class="collapse-item" href="change-name.html">Change of Name</a>
+                        <a class="collapse-item" href="address-correction.html">Address Correction</a>
+                    </div>
+                </div>
+            </li>
+            <!-- Divider -->
+            <hr class="sidebar-divider d-none d-md-block">
+            <!-- Sidebar Toggler (Sidebar) -->
+            <div class="text-center d-none d-md-inline">
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+            </div>
+        </ul>
+        <!-- End of Sidebar -->
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+            <!-- Main Content -->
+            <div id="content">
+                <!-- Topbar -->
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow" id="header">
+                    <!-- Sidebar Toggle (Topbar) -->
+                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                    <!-- Topbar Search -->
+                    <!-- Topbar Navbar -->
+                    <ul class="navbar-nav ml-auto">
+                        <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+                        <li class="nav-item dropdown no-arrow d-sm-none">
+                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-search fa-fw"></i>
+                            </a>
+                            <!-- Dropdown - Messages -->
+                            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in" aria-labelledby="searchDropdown">
+                                <form class="form-inline mr-auto w-100 navbar-search">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-primary" type="button">
+                                                <i class="fas fa-search fa-sm"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </li>
+                        <!-- Nav Item - Alerts -->
+                        <li class="nav-item dropdown no-arrow mx-1">
+                            <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-bell fa-fw"></i>
+                                <!-- Counter - Alerts -->
+                                <span class="badge badge-danger badge-counter">3+</span>
+                            </a>
+                            <!-- Dropdown - Alerts -->
+                            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="alertsDropdown">
+                                <h6 class="dropdown-header"> Alerts Center </h6>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="mr-3">
+                                        <div class="icon-circle bg-primary">
+                                            <i class="fas fa-file-alt text-white"></i>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="small text-gray-500">December 12, 2019</div>
+                                        <span class="font-weight-bold">A new monthly report is ready to download!</span>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="mr-3">
+                                        <div class="icon-circle bg-success">
+                                            <i class="fas fa-donate text-white"></i>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="small text-gray-500">December 7, 2019</div> $290.29 has been deposited into your account!
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="mr-3">
+                                        <div class="icon-circle bg-warning">
+                                            <i class="fas fa-exclamation-triangle text-white"></i>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="small text-gray-500">December 2, 2019</div> Spending Alert: We've noticed unusually high spending for your account.
+                                    </div>
+                                </a>
+                                <a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
+                            </div>
+                        </li>
+                        <!-- Nav Item - Messages -->
+                        <li class="nav-item dropdown no-arrow mx-1">
+                            <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-envelope fa-fw"></i>
+                                <!-- Counter - Messages -->
+                                <span class="badge badge-danger badge-counter">7</span>
+                            </a>
+                            <!-- Dropdown - Messages -->
+                            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="messagesDropdown">
+                                <h6 class="dropdown-header"> Message Center </h6>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="dropdown-list-image mr-3">
+                                        <img class="rounded-circle" src="https://source.unsplash.com/fn_BT9fwg_E/60x60" alt="">
+                                        <div class="status-indicator bg-success"></div>
+                                    </div>
+                                    <div class="font-weight-bold">
+                                        <div class="text-truncate">Hi there! I am wondering if you can help me with a problem I've been having.</div>
+                                        <div class="small text-gray-500">Emily Fowler · 58m</div>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="dropdown-list-image mr-3">
+                                        <img class="rounded-circle" src="https://source.unsplash.com/AU4VPcFN4LE/60x60" alt="">
+                                        <div class="status-indicator"></div>
+                                    </div>
+                                    <div>
+                                        <div class="text-truncate">I have the photos that you ordered last month, how would you like them sent to you?</div>
+                                        <div class="small text-gray-500">Jae Chun · 1d</div>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="dropdown-list-image mr-3">
+                                        <img class="rounded-circle" src="https://source.unsplash.com/CS2uCrpNzJY/60x60" alt="">
+                                        <div class="status-indicator bg-warning"></div>
+                                    </div>
+                                    <div>
+                                        <div class="text-truncate">Last month's report looks great, I am very happy with the progress so far, keep up the good work!</div>
+                                        <div class="small text-gray-500">Morgan Alvarez · 2d</div>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="dropdown-list-image mr-3">
+                                        <img class="rounded-circle" src="https://source.unsplash.com/Mv9hjnEUHR4/60x60" alt="">
+                                        <div class="status-indicator bg-success"></div>
+                                    </div>
+                                    <div>
+                                        <div class="text-truncate">Am I a good boy? The reason I ask is because someone told me that people say this to all dogs, even if they aren't good...</div>
+                                        <div class="small text-gray-500">Chicken the Dog · 2w</div>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item text-center small text-gray-500" href="#">Read More Messages</a>
+                            </div>
+                        </li>
+                        <div class="topbar-divider d-none d-sm-block"></div>
+                        <!-- Nav Item - User Information -->
+                        <li class="nav-item dropdown no-arrow">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Valerie Luna</span>
+                                <img class="img-profile rounded-circle" src="https://source.unsplash.com/QAB-WJcbgJk/60x60">
+                            </a>
+                            <!-- Dropdown - User Information -->
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+                                <a class="dropdown-item" href="../Login-forms/profile.html">
+                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i> Profile </a>
+                                <!--<a class="dropdown-item" href="#">
+                                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i> Settings
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i> Activity Log
+                                </a>-->
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i> Logout </a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- End of Topbar -->
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                        <h1 class="h3 mb-0 text-gray-800">Users</h1>
+                        <div> <a href="#" class=" d-sm-inline-block btn btn-sm btn-primary shadow-sm" data-toggle="modal" data-target="#adduser"><i class="fas fa-plus fa-md text-white-100"></i></a>
+                            <a href="#" class=" d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-md text-white-100"></i></a></div>
+                    </div>
+                    <!-- DataTales Example -->
+                    <div class="card shadow mb-4">
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                    <thead>
+                                        <tr>
+                                            <th>Username</th>
+                                            <th>Organization</th>
+                                            <th>First Name</th>
+                                            <th>Last Name</th>
+                                            <th>Role Name</th>
+                                            <th>Email</th>
+                                            <th>Phone Number</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tfoot>
+                                        <tr>
+                                            <th>Username</th>
+                                            <th>Organization</th>
+                                            <th>First Name</th>
+                                            <th>Last Name</th>
+                                            <th>Role Name</th>
+                                            <th>Email</th>
+                                            <th>Phone Number</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </tfoot>
+                                    <tbody>
+                                        <tr class="user-table-body-row" data-row-id="0">
+                                            <td class="username">Tiger Nixon1</td>
+                                            <td class="org">Intelloe</td>
+                                            <td class="firstname">ABC</td>
+                                            <td class="lastname">XYZ</td>
+                                            <td class="role">Application Designer</td>
+                                            <td class="email">xyz@intellore.com</td>
+                                            <td class="mobile">9187465736 </td>
+                                            <td><i class="fa fa-edit"></i> <i class="fa fa-trash
+                                                "></i></td>
+                                        </tr>
+                                        <tr class="user-table-body-row" data-row-id="1">
+                                            <td class="username">Tiger Nixon2</td>
+                                            <td class="org">Intelloe</td>
+                                            <td class="firstname">ABC</td>
+                                            <td class="lastname">XYZ</td>
+                                            <td class="role">Application Designer</td>
+                                            <td class="email">xyz@intellore.com</td>
+                                            <td class="mobile">9187465736 </td>
+                                            <td><i class="fa fa-edit"></i> <i class="fa fa-trash
+                                                "></i></td>
+                                        </tr>
+                                        <tr class="user-table-body-row" data-row-id="2">
+                                            <td class="username">Tiger Nixon3</td>
+                                            <td class="org">Intelloe</td>
+                                            <td class="firstname">ABC</td>
+                                            <td class="lastname">XYZ</td>
+                                            <td class="role">Application Designer</td>
+                                            <td class="email">xyz@intellore.com</td>
+                                            <td class="mobile">9187465736 </td>
+                                            <td><i class="fa fa-edit"></i> <i class="fa fa-trash
+                                                "></i></td>
+                                        </tr>
+                                        <tr class="user-table-body-row" data-row-id="3">
+                                            <td class="username">Tiger Nixon4</td>
+                                            <td class="org">Intelloe</td>
+                                            <td class="firstname">ABC</td>
+                                            <td class="lastname">XYZ</td>
+                                            <td class="role">Application Designer</td>
+                                            <td class="email">xyz@intellore.com</td>
+                                            <td class="mobile">9187465736 </td>
+                                            <td><i class="fa fa-edit"></i> <i class="fa fa-trash
+                                                "></i></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal fade" id="adduser" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h4 class="modal-title" id="exampleModalLongTitle">Add User</h4>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <form class="adduser" id="adduser">
+                                    <div class="modal-body">
+                                        <div class="form-group row">
+                                            <div class="col-sm-12 mb-3 mb-sm-0">
+                                                <label>Organization Name</label>
+                                                <input type="text" class="form-control form-control-user" id="organizationname" placeholder="First Name">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <div class="col-sm-6 mb-3 mb-sm-0">
+                                                <label>First Name</label>
+                                                <input type="text" class="form-control form-control-user" id="firstName" placeholder="First Name">
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <label>Last Name</label>
+                                                <input type="text" class="form-control form-control-user" id="lastName" placeholder="Last Name">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <div class="col-sm-6 mb-3 mb-sm-0">
+                                                <label>Username</label>
+                                                <input type="text" class="form-control form-control-user" id="userName" placeholder="Username">
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <label>Select Role</label>
+                                                <select class="form-control" id="role" placeholder="Select Role">
+                                                    <option>Admin</option>
+                                                    <option>Admin</option>
+                                                    <option>Admin</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <div class="col-sm-6 mb-3 mb-sm-0">
+                                                <label>Phone Number</label>
+                                                <input type="tel" class="form-control form-control-user" name="phone_number[main]" id="phone_number" />
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <label>Email</label>
+                                                <input type="text" class="form-control form-control-user" id="Email" placeholder="Email">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                        <button type="button" id="add-new-row" class="btn btn-primary add-row" value="Add Row">Save </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.container-fluid -->
+            </div>
+            <!-- End of Main Content -->
+            <!-- Footer -->
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>Copyright &copy; Your Website 2019</span>
+                    </div>
+                </div>
+            </footer>
+            <!-- End of Footer -->
+        </div>
+        <!-- End of Content Wrapper -->
+    </div>
+    <!-- End of Page Wrapper -->
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="exampleModalLabel">Ready to Leave?</h4>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                    <a class="btn btn-primary" href="../Login-forms/login.html">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Bootstrap core JavaScript-->
+    <script src="../vendor/jquery/jquery.min.js"></script>
+    <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Core plugin JavaScript-->
+    <script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
+    <!-- Custom scripts for all pages-->
+    <script src="../js/sb-admin-2.min.js"></script>
+    <!-- Page level plugins -->
+    <script src="../vendor/datatables/jquery.dataTables.min.js"></script>
+    <script src="../vendor/datatables/dataTables.bootstrap4.min.js"></script>
+    <!-- Page level custom scripts -->
+    <script src="../js/demo/datatables-demo.js"></script>
+    <script>
+        var phone_number = window.intlTelInput(document.querySelector("#phone_number"), {
+            separateDialCode: true,
+            preferredCountries: ["in"],
+            hiddenInput: "full",
+            utilsScript: "//cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.3/js/utils.js"
+        });
+
+        $("form").submit(function () {
+            var full_number = phone_number.getNumber(intlTelInputUtils.numberFormat.E164);
+            $("input[name='phone_number[full]'").val(full_number);
+            alert(full_number)
+
+        });
+    </script>
+    <style>
+        .iti {
+            display: block;
+        }
+
+    </style>
+    <script>
+        $(function () {
+            var operation = "A";
+            var selected_index = -1;
+
+            var tbClients = localStorage.getItem("tbClients");
+
+            tbClients = JSON.parse(tbClients);
+
+            if (tbClients == null)
+                tbClients = [];
+        });
+    </script>
+    <script>
+        $(window).scroll(function () {
+            var sticky = $('#header'),
+                scroll = $(window).scrollTop();
+
+            if (scroll >= 100) sticky.addClass('fixed');
+            else sticky.removeClass('fixed');
+        });
+    </script>
+    <style>
+        .fixed {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 999;
+        }
+
+    </style>
+    <script>
+
+        const closeModalListener = function () {
+            const modal = document.querySelector('.modal');
+            modal.addEventListener('click', closeModal);
+        }
+
+        const openModal = function () {
+            const modal = document.querySelector('.modal');
+            modal.classList.remove('fade');
+            modal.style.display = 'block';
+        }
+
+        const closeModal = function () {
+            const modal = document.querySelector('.modal');
+            modal.classList.add('fade');
+            modal.style.display = 'none';
+        }
+
+        const updateFormValue = function (userData) {
+            const modal = document.querySelector('.modal');
+            // updating user fields
+            modal.querySelector('#organizationname').value = userData.orgName;
+            modal.querySelector('#firstName').value = userData.firstName;
+            modal.querySelector('#lastName').value = userData.lastName;
+            modal.querySelector('#userName').value = userData.userName;
+            modal.querySelector('#role').value = userData.role;
+            modal.querySelector('#phone_number').value = userData.mobile;
+            modal.querySelector('#Email').value = userData.email;
+        }
+
+        const editUser = function () {
+            const modal = document.querySelector('.modal');
+            const editBtn = document.querySelector('#dataTable');
+            const modalForm = modal.querySelectorAll('.form-group');
+
+            editBtn.addEventListener('click', function (e) {
+                openModal();
+
+                const user = e.target.closest('.user-table-body-row');
+
+                const userData = {
+                    orgName: user.querySelector('.org').textContent,
+                    firstName: user.querySelector('.firstname').textContent,
+                    lastName: user.querySelector('.lastname').textContent,
+                    userName: user.querySelector('.username').textContent,
+                    role: user.querySelector('.role').textContent,
+                    email: user.querySelector('.email').textContent,
+                    mobile: user.querySelector('.mobile').textContent,
+                }
+
+                updateFormValue(userData);
+            });
+        }
+
+        // initialization of all listener and contructor type code here: 
+        const init = function () {
+            closeModalListener();
+            editUser();
+        }
+
+        $(document).ready(function () {
+            init();
+        })
+
+        // add new record to the table
+        $(document).ready(function () {
+            $("#add-new-row").click(function () {
+                var orgname = $("#organizationname").val();
+                var firstname = $("#FirstName").val();
+                var lastname = $("#LastName").val();
+                var username = $("#Username").val();
+                var role = $('#rolename :selected').text();
+                var phonenumber = $("#phone_number").val();
+                var Email = $("#Email").val();
+                var markup = "<tr><td>" + username + "</td><td>" + orgname + "</td><td>" + firstname + "</td><td>" + lastname + "</td><td>" + role + "</td><td>" + Email + "</td><td>" + phonenumber + "</td><td><i class='fa fa-edit'></i> <i class='fa fa-trash'></i></td></tr>";
+                $("table tbody").append(markup);
+                console.log("jyoti done");
+            });
+        });
+
+        //delete record from the table
+
+        $("#dataTable").on('click', '.fa-trash', function () {
+
+            if (confirm("Do you want to delete this row?") == true) {
+                $(this).closest('tr').remove();
+            } else {
+                document.getElementById("ColorChanger").style.backgroundColor = "#C0C0C0";
+            }
+
+
+        });
+
+        //edit table row data
+
+
+
+
+        //validating user form
+
+        $(document).ready(function () {
+            $flag = 1;
+
+
+            $("#FirstName").focusout(function () {
+                $("#error_finalmessage").text("");
+                $("#error_finalmessage").hide();
+                if ($(this).val() === '') {
+                    $(this).css("border-color", "#cd2d00");
+                    $('#customerSubmitButton').attr('disabled', true);
+                    $("#error_firstname").text("* Please enter your first name!");
+                } else if ($(this).val().length < 3) {
+                    $(this).css("border-color", "#cd2d00");
+                    $('#customerSubmitButton').attr('disabled', true);
+                    $("#error_firstname").text("* Minimum three characters are required!");
+                } else {
+                    $(this).css("border-color", "#2eb82e");
+                    $('#customerSubmitButton').attr('disabled', false);
+                    $("#error_firstname").text("");
+                }
+            });
+
+            $("#LastName").focusout(function () {
+                $("#error_finalmessage").text("");
+                $("#error_finalmessage").hide();
+                if ($(this).val() === '') {
+                    $(this).css("border-color", "#cd2d00");
+                    $('#customerSubmitButton').attr('disabled', true);
+                    $("#error_lastname").text("* Please enter your Lastname!");
+                } else if ($(this).val().length < 3) {
+                    $(this).css("border-color", "#cd2d00");
+                    $('#customerSubmitButton').attr('disabled', true);
+                    $("#error_lastname").text("* Minimum three characters are required!");
+                } else {
+                    $(this).css("border-color", "#2eb82e");
+                    $('#customerSubmitButton').attr('disabled', false);
+                    $("#error_lastname").text("");
+                }
+            });
+
+
+
+            /***** Email Validation ****/
+            $("#customeremail").keyup(function () {
+                $("#error_finalmessage").text("");
+                $("#error_finalmessage").hide();
+                var sEmail = $('#customeremail').val();
+                if ($.trim(sEmail).length === 0) {
+                    $(this).css("border-color", "#cd2d00");
+                    $('#customerSubmitButton').attr('disabled', true);
+                    $("#error_customeremail").text("* Please enter valid email address");
+
+                    //e.preventDefault();
+                }
+                if (validateEmail(sEmail)) {
+                    $(this).css("border-color", "#2eb82e");
+                    $('#customerSubmitButton').attr('disabled', false);
+                    $("#error_customeremail").text("");
+                } else {
+                    $(this).css("border-color", "#cd2d00");
+                    $('#customerSubmitButton').attr('disabled', true);
+                    $("#error_customeremail").text("* Please enter valid email address");
+                    //e.preventDefault();
+                }
+            });
+
+            $("#customeremail").focusout(function () {
+                $("#error_finalmessage").text("");
+                $("#error_finalmessage").hide();
+                var sEmail = $('#customeremail').val();
+                if ($.trim(sEmail).length === 0) {
+                    $(this).css("border-color", "#cd2d00");
+                    $('#customerSubmitButton').attr('disabled', true);
+                    $("#error_customeremail").text("* Please enter valid email address");
+
+                    //e.preventDefault();
+                }
+                if (validateEmail(sEmail)) {
+                    $(this).css("border-color", "#2eb82e");
+                    $('#customerSubmitButton').attr('disabled', false);
+                    $("#error_customeremail").text("");
+                } else {
+                    $(this).css("border-color", "#cd2d00");
+                    $('#customerSubmitButton').attr('disabled', true);
+                    $("#error_customeremail").text("* Please enter valid email address");
+                    //e.preventDefault();
+                }
+            });
+            /***** Login Data Validation ****/
+
+
+            $("#phone_number1").focusout(function () {
+                $("#error_finalmessage").text("");
+                $("#error_finalmessage").hide();
+                var nolength = $(this).val().length;
+                console.log(nolength);
+                if ($(this).val() === '') {
+                    $(this).css("border-color", "#cd2d00");
+                    $('#customerSubmitButton').attr('disabled', true);
+                    $("#error_customerPhone").text("* Please enter your mobile number!");
+                } else if (nolength !== 10) {
+                    $(this).css("border-color", "#cd2d00");
+                    $('#customerSubmitButton').attr('disabled', true);
+                    $("#error_customerPhone").text("* Mobile number should be 10 digit!");
+                } else {
+                    $(this).css("border-color", "#2eb82e");
+                    $('#customerSubmitButton').attr('disabled', false);
+                    $("#error_customerPhone").text("");
+                }
+            });
+
+            $("#phone_number1").keypress(function () {
+
+                var evt = ($(this).val()) ? $(this).val() : window.event;
+                var charCode = (evt.which) ? evt.which : evt.keyCode;
+                if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+                    return false;
+                }
+                return true;
+            });
+
+            $("#phone_number1").keyup(function () {
+                $("#error_finalmessage").text("");
+                $("#error_finalmessage").hide();
+                var nolength = $(this).val().length;
+                //console.log(nolength);
+                if ($(this).val() === '') {
+                    $(this).css("border-color", "#cd2d00");
+                    $('#customerSubmitButton').attr('disabled', true);
+                    $("#error_customerPhone").text("* Please enter your mobile number!");
+                } else if (nolength !== 10) {
+                    $(this).css("border-color", "#cd2d00");
+                    $('#customerSubmitButton').attr('disabled', true);
+                    $("#error_customerPhone").text("* Mobile number should be 10 digit!");
+                } else {
+                    $(this).css("border-color", "#2eb82e");
+                    $('#customerSubmitButton').attr('disabled', false);
+                    $("#error_customerPhone").text("");
+
+
+                }
+            });
+
+
+
+
+            /***+* Submit Validation ****/
+            $("#add-new-row").click(function () {
+                //countdown();
+                validateform1();
+            });
+
+        });
+
+        function validateform1() {
+            var validform1 = true;
+
+            if ($("#FirstName").val() === '') {
+                $("#FirstName").css("border-color", "#cd2d00");
+                $('#add-new-row').attr('disabled', true);
+                $("#error_firstname").text("* Please enter your first name!");
+                validform1 = false;
+            }
+
+            if ($("#LastName").val() === '') {
+                $("#LastName").css("border-color", "#cd2d00");
+                $('#add-new-row').attr('disabled', true);
+                $("#error_lastname").text("* Please enter your last name!");
+                validform1 = false;
+            }
+
+
+            if ($("#Username").val() === '') {
+                $("#Username").css("border-color", "#cd2d00");
+                $('#add-new-row').attr('disabled', true);
+                $("#error_address").text("* Please enter your address!");
+                validform1 = false;
+            }
+
+
+            if ($("#phone_number").val() === '') {
+                $("#phone_number").css("border-color", "#cd2d00");
+                $('#add-new-row').attr('disabled', true);
+                $("#error_assetId").text("* Please enter Asset Id!");
+                validform1 = false;
+            }
+
+            if ($("#Email").val() === '') {
+                $("#Email").css("border-color", "#cd2d00");
+                $('#add-new-row').attr('disabled', true);
+                $("#error_userPassword").text("* Please enter password!");
+                validform1 = false;
+            }
+
+            if ($("#userconfirmpassword").val() === '') {
+                $("#userconfirmpassword").css("border-color", "#cd2d00");
+                $('#add-new-row').attr('disabled', true);
+                $("#error_userconfirmpassword").text("* Please confirm password!");
+                validform1 = false;
+            }
+
+            if ($("#customeremail").val() === '') {
+                $("#customeremail").css("border-color", "#cd2d00");
+                $('#add-new-row').attr('disabled', true);
+                $("#error_customeremail").text("* Please enter your Email!");
+                validform1 = false;
+            } else if (!validateEmail1($("#customeremail").val())) {
+                $("#customeremail").css("border-color", "#cd2d00");
+                $('#add-new-row').attr('disabled', true);
+                $("#error_customeremail").text("* Invalid email address");
+                validform1 = false;
+            }
+            if ($("#phone_number1").val() === '') {
+                $("#phone_number1").css("border-color", "#cd2d00");
+                $('#add-new-row').attr('disabled', true);
+                $("#error_customerPhone").text("* Please enter your mobile number!");
+                validform1 = false;
+            } else if ($("#phone_number1").val().length !== 10) {
+                $("#phone_number1").css("border-color", "#cd2d00");
+                $('#add-new-row').attr('disabled', true);
+                $("#error_customerPhone").text("* Mobile number should be 10 digit!");
+                validform1 = false;;
+            }
+
+            if (validform1) {
+
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+
+
+
+        function validateEmail1(sEmail) {
+            var filter = /^((([a-zA-Z]|\d|[!#\$%&'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+(\.([a-z]|\d|[!#\$%&'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+)*)|((\x22)((((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(([\x01-\x08\x0b\x0c\x0e-\x1f\x7f]|\x21|[\x23-\x5b]|[\x5d-\x7e]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(\\([\x01-\x09\x0b\x0c\x0d-\x7f]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]))))*(((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(\x22)))@((([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.?$/;
+            if (filter.test(sEmail)) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        $('#userpassword, #userconfirmpassword').on('keyup', function () {
+            if ($('#userpassword').val() == $('#userconfirmpassword').val()) {
+                $('#message1').html('Matching').css('color', 'green');
+            } else
+                $('#message1').html('Not Matching').css('color', 'red');
+        });
+    </script>
+</body>
+
+</html>
